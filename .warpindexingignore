@@ -1,0 +1,7 @@
+# Keep Warp codebase context focused on source code
+package-lock.json
+.claude/**
+
+# Static assets are useful at runtime but usually low-signal for code generation
+public/icons/**
+public/images/**
