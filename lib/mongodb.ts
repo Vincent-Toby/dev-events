@@ -4,7 +4,7 @@ const MONGODB_URI = (() => {
   const uri = process.env.MONGODB_URI;
 
   if (!uri) {
-    throw new Error("Please define the MONGODB_URI environment variable.");
+    throw new Error("Please define the MONGODB_URI environment variable inside .env.local");
   }
 
   return uri;
