@@ -4,6 +4,7 @@ import Event from "./event.model";
 export interface IBooking {
   eventId: Types.ObjectId;
   email: string;
+  slug: string;
   createdAt?: Date;
   updatedAt?: Date;
 }
