@@ -26,13 +26,19 @@ const EventAgenda = ({agendaItems}: {agendaItems: string[]}) => (
   </div>
 );
 
-const EventTags = ({tags}: {tags: string[]}) => (
-  <div className="flex flex-row gap-1.5 flex-wrap">
-    {tags.map((tag, index) => (
-      <div className="pill" key={index}>{tag}</div>
-    ))}
-  </div>
-);
+const EventTags = ({ tags }: { tags: string[] }) => {
+  const tagArray = tags.flatMap(t => {
+    try { return JSON.parse(t); } catch { return t; }
+  });
+
+  return (
+    <div className="flex flex-row gap-1.5 flex-wrap">
+      {tagArray.map((tag: string, index: number) => (
+        <div className="pill" key={index}>{tag}</div>
+      ))}
+    </div>
+  );
+};
 
 const EventDetails = async ({ params }: { params: Promise<string> }) => {
 
