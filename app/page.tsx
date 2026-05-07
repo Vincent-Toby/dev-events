@@ -17,7 +17,7 @@ const page = async () => {
         The Hub for Every Dev <br /> Event You Can&apos;t Miss
       </h1>
       <p className="text-center mt-5">
-        Hackathons, Meetups, and Conferences, All in One Place
+        Hackathons, Meetups, and Conferences, All in One Place.
       </p>
 
       <ExploreBtn />
